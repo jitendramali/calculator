@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calcelutor</title>
+	<style>
+*{margin:0;
+	padding:0;}
+
+body{
+	background-color:#000;
+	color:white;
+	overflow: hidden;
+	font-size:25px;
+	max-width: 1180px;
+	font-family: cursive;
+}
+.maruti{
+	border:2px solid red;
+	height: 330px;
+	width:300px;
+	margin-top:200px	; 
+	margin-left:50%;
+	transform:translate(-50%,-50%);
+	font-size:30px;
+	font-weight: bold;
+	background-color:#909099;
+	border-radius:20px;
+}
+.maruti .first{
+	background-color:blue;
+	color:white;
+	height:40px;
+	width:50px;
+	border-radius:50%;	
+}
+.maruti .firstreset{
+	background-color:pink;
+	color:purple;
+	height: 20px;
+	width:80px;
+	font-size:15px;
+	border-radius:20px;
+
+	</style>
+</head>
+<body>
+
+	<form name="example" class="maruti"><center>
+		<input type="text" size="30" name="answer"><br>
+		<input type="button" name="b1" value="1" size="10" onclick="example.answer.value += '1'" class="first">
+		<input type="button" name="b2" value="2" size="10" onclick="example.answer.value += '2'" class="first">
+		<input type="button" name="b3" value="3" size="10" onclick="example.answer.value += '3'" class="first"><br>
+		<input type="button" name="b4" value="4" size="10" onclick="example.answer.value += '4'" class="first">
+		<input type="button" name="b5" value="5" size="10" onclick="example.answer.value += '5'" class="first">
+		<input type="button" name="b6" value="6" size="10" onclick="example.answer.value += '6'" class="first"><br>
+		<input type="button" name="b7" value="7" size="10" onclick="example.answer.value += '7'" class="first" >
+		<input type="button" name="b8" value="8" size="10" onclick="example.answer.value += '8'" class="first">
+		<input type="button" name="b9" value="9" size="10" onclick="example.answer.value += '9'" class="first"><br>
+		<input type="button" name="b10" value="0" size="10" onclick="example.answer.value += '0'" class="first">
+		<input type="button" name="b11" value="=" size="10" onclick="example.answer.value += '='" class="first">
+		<input type="button" name="b12" value="*" size="10" onclick="example.answer.value += '*'" class="first"><br>
+		<input type="button" name="b13" value="/" size="10" onclick="example.answer.value += '/'" class="first" >
+		<input type="button" name="b14" value="-" size="10" onclick="example.answer.value += '-'" class="first">
+		<input type="button" name="b15" value="%" size="10" onclick="example.answer.value += '%'" class="first"><br>
+		<input type="reset" name="b16" value="Reset All" size="10" onclick="cal()"class="firstreset" >
+		<input type="button" name="b16" value="Calculate" size="10" onclick="example.answer.value = eval(example.answer.value)" class="firstreset" >
+
+
+		</center>
+	</form>
+
+<script>
+	function cal(){
+
+	document.example.firstreset.value =
+	eval(document.example.calculator.value)
+}
+</script>
+</body>
+</html>
